@@ -5,401 +5,223 @@
 <div class="container">
     <div ng-app="" style="padding-top:25px;">
         <div class="row">
-            <h3>Input pertinent university info into boxes. Results appear below</h3>
+            <center><h2>Input pertinent university info into boxes.</h2> <br><h4>Results appear in textbox below. Simply highlight, copy &amp; paste.</h4></center>
         </div>
         <div class="row">
-            <h4>General Information</h4>
-                <p>Mascot:<input type="text" ng-model="mascot"/></p>
-                Link to University History (use full URL):<input type="text" ng-model="history"/></p>
-                <p>City, State:<input type="text" ng-model="location"/></p>
-                <p>Student Population:<input type="text" ng-model="population"/></p>
-                <p>Public or Private:
-                    <input name="pubpriv" type="radio" value="Public"  ng-model="publicprivate"/>Public<br>
-                    <input name="pubpriv" type="radio" value="Private" ng-model="publicprivate"/>Private
+            <h3>General Information</h3>
+            <div class="col-xs-6">
+                <p>Mascot:<br><input type="text" ng-model="mascot"/></p>
+                Link to University History (use full URL):<br><input type="text" ng-model="history"/></p>
+                <p>City, State:<br><input type="text" ng-model="location"/></p>
+                <p>Student Population:<br><input type="text" ng-model="population"/></p>
+            </div>
+            <div class="col-xs-6">
+                <p>Public or Private:<br>
+                    <input name="pubpriv" type="radio" value="Public"  ng-model="publicprivate"/> Public<br>
+                    <input name="pubpriv" type="radio" value="Private" ng-model="publicprivate"/> Private
                 </p>
-                <p>Campus Size:
-                    <input name="size" type="radio" value="Tiny" ng-model="size"/>Tiny<br>
-                    <input name="size" type="radio" value="Walkable" ng-model="size"/>Private<br>
-                    <input name="size" type="radio" value="Spreadout" ng-model="size"/>Spreadout
+                <p>Campus Size:<br>
+                    <input name="size" type="radio" value="Tiny" ng-model="size"/> Tiny<br>
+                    <input name="size" type="radio" value="Walkable" ng-model="size"/> Walkable<br>
+                    <input name="size" type="radio" value="Spreadout" ng-model="size"/> Spreadout
                 </p>
+            </div>
         </div>
         <div class="row">
-            <h4>Financial</h4>
-
+            <h3>Financial</h3>
+            <div class="col-xs-6">
+                <p>In-State Tuition (do not include $)<br><input type="text" ng-model="instate"/></p>
+                <p>Out-Of-State Tuition (do not include $)<br><input type="text" ng-model="outofstate"/></p>
+                <p>Room &amp; Board (do not include $)<br><input type="text" ng-model="roomboard"/></p>
+                <p>Financial Aid (insert URL)<br><input type="text" ng-model="financialaid"/></p>
+                <p>Athletic Scholarships?<br>
+                    <input name="athscholar" type="radio" value="Yes"  ng-model="athscholar"/> Yes<br>
+                    <input name="athscholar" type="radio" value="No" ng-model="athscholar"/> No
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <p>Meal Plan Options<br><input type="text" ng-model="mealplanoptions"/></p>
+                <p>Live on Campus?<br><input type="text" ng-model="liveoncampus"/></p>
+                <p>Cars Allowed on Campus?<br>
+                    <input name="carsallowed" type="radio" value="Yes"  ng-model="carsallowed"/> Yes<br>
+                    <input name="carsallowed" type="radio" value="No" ng-model="carsallowed"/> No
+                </p>
+                <p>Parking Cost (do not include $)<br><input type="text" ng-model="parkingcost"/></p>
+            </div>
         </div>
         <div class="row">
-            <h4>Academics</h4>
-
+            <h3>Academics</h3>
+            <div class="col-xs-6">
+                <p>Required GPA:<br><input type="text" ng-model="reqgpa"/></p>
+                <p>Required ACT:<br><input type="text" ng-model="reqact"/></p>
+                <p>Required SAT:<br><input type="text" ng-model="reqsat"/></p>
+                <p>Fields of Study (insert URL)<br><input type="text" ng-model="fieldsofstudy"/></p>
+            </div>
+            <div class="col-xs-6">
+                <p>Graduation Rate<br><input type="text" ng-model="graduationrate"/></p>
+                <p>Class Size Ratio<br><input type="text" ng-model="classsizeratio"/></p>
+                <p>Center for Disabilities (insert URL)<br><input type="text" ng-model="disabilities"/></p>
+                <p>Tutoring Services (insert URL)<br><input type="text" ng-model="tutoring"/></p>
+            </div>
         </div>
         <div class="row">
-            <h4>Atletics</h4>
+            <h3>Atletics</h3>
+            <div class="col-xs-6">
+                <h5>Offered Programs - </h5>
+                    <input name="menprog" type="radio" value="Men's Program (NCAA)"  ng-model="menprogncaa"/> Men's NCAA<br>
+                    <input name="menprog" type="radio" value="Men's Program (NAIA)" ng-model="menprogniaa"/> Men's NAIA<br>
+                    <input name="menprog" type="radio" value="Men's Program (Club)" ng-model="menprogclub"/> Men's Club<br>
+                    <input name="menprog" type="radio" value="Men's Program (NJCAA)" ng-model="menprognjcaa"/> Men's NJCAA<br>
+                    <input name="womenprog" type="radio" value="Women's Progam (NCAA)"  ng-model="womenprogncaa"/> Women's NCAA<br>
+                    <input name="womenprog" type="radio" value="Women's Progam (NAIA)" ng-model="womenprogniaa"/> Women's NAIA<br>
+                    <input name="womenprog" type="radio" value="Women's Progam (Club)" ng-model="womenprogclub"/> Women's Club<br>
+                    <input name="womenprog" type="radio" value="Women's Progam (NJCAA)" ng-model="womenprognjcaa"/> Women's NJCAA<br>
+                    <input name="bothprog" type="radio" value="Both Programs (NCAA)"  ng-model="bothprogncaa"/> Both NCAA<br>
+                    <input name="bothprog" type="radio" value="Both Programs (NAIA)" ng-model="bothprogniaa"/> Both NAIA<br>
+                    <input name="bothprog" type="radio" value="Both Programs (Club)" ng-model="bothprogclub"/> Both Club<br>
+                    <input name="bothprog" type="radio" value="Both Programs (NJCAA)" ng-model="bothprognjcaa"/> Both NJCAA
+            </div>
+            <div class="col-xs-6">
+                <p>Team Website (insert URL)<br><input type="text" ng-model="teamwebsite"/></p>
+                <p>Head Coach<br><input type="text" ng-model="coach"/></p>
+                <p>Assistant Coach<br><input type="text" ng-model="asstcoach"/></p>
+                <p>Gym Facilities?<br>
+                    <input name="gym" type="radio" value="Yes"  ng-model="gym"/> Yes<br>
+                    <input name="gym" type="radio" value="No" ng-model="gym"/> No
+                </p>
+                <p>Gym Facilities Cost<br><input type="text" ng-model="gymcost"/></p>
+            </div>
         </div>
         <div class="row">
-
-
-            <pre><xmp>
-
-<section class="container-wrap main-color " style="padding-top: 40px; padding-bottom: 40px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-12">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="hr-title hr-full hr-center" style="font-size: 24pt;"><abbr><i class=""></i> GENERAL INFORMATION</abbr></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><!-- end section -->
-
-<section class="container-wrap main-color " style="padding-top: 10px; padding-bottom: 10px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-12">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="row multi-columns-row colored-icons bordered-icons">
-<div class="one-by-one-animated animate-when-almost-visible">
-<div class="col-xs-12 col-sm-6 col-md-4"><a class="kleo-block feature-item list-el-animated default-icons-size" target="">
-</a>
-<h3 class="feature-title">Mascot</h3>
-<div class="feature-text"></xmp><span ng-bind="mascot"></span><xmp></div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4"><a class="kleo-block feature-item list-el-animated default-icons-size kleo-open-href" ng-href="{{history}}" target="_blank">
-</a>
-<h3 class="feature-title">History</h3>
-<div class="feature-text">History Here</div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4"><a class="kleo-block feature-item list-el-animated default-icons-size" target="">
-</a>
-<h3 class="feature-title">City, State</h3>
-<div class="feature-text">Orlando, Florida</div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4"><a class="kleo-block feature-item list-el-animated default-icons-size" target="">
-</a>
-<h3 class="feature-title">Student Population</h3>
-<div class="feature-text">63,000</div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4"><a class="kleo-block feature-item list-el-animated default-icons-size" target="">
-</a>
-<h3 class="feature-title">Public or Private</h3>
-<div class="feature-text">Public</div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4"><a class="kleo-block feature-item list-el-animated default-icons-size" target="">
-</a>
-<h3 class="feature-title">Campus Size</h3>
-<div class="feature-text">Spreadout</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><!-- end section -->
-
-<section class="container-wrap main-color " style="padding-top: 40px; padding-bottom: 40px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-12">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="hr-title hr-full hr-center" style="font-size: 24pt;"><abbr><i class=""></i> FINANCIAL</abbr></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><!-- end section -->
-
-<section class="container-wrap main-color " style="padding-top: 10px; padding-bottom: 10px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-6">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="kleo_text_column wpb_content_element ">
-<div class="wpb_wrapper">
+        
+<pre><xmp>[vc_row][vc_column][kleo_divider icon="0" text="GENERAL INFORMATION" style="font-size: 24pt;"][/vc_column][/vc_row][vc_row padding_top="10" padding_bottom="10"][vc_column][kleo_grid type="3" animation="yes" colored_icons="yes" bordered_icons="yes"][kleo_feature_item title="Mascot" icon="users-1" icon_color="#d49229"]{{mascot}}[/kleo_feature_item][kleo_feature_item title="History" href="{{history}}" icon="hourglass" icon_color="#d49229" target="_blank"]Click Here[/kleo_feature_item][kleo_feature_item title="City, State" icon="globe" icon_color="#d49229"]{{location}}[/kleo_feature_item][kleo_feature_item title="Student Population" icon="group" icon_color="#d49229"]{{population}}[/kleo_feature_item][kleo_feature_item title="Public or Private" icon="lock-open-alt" icon_color="#d49229"]{{publicprivate}}[/kleo_feature_item][kleo_feature_item title="Campus Size" icon="building" icon_color="#d49229"]{{size}}[/kleo_feature_item][/kleo_grid][/vc_column][/vc_row][vc_row][vc_column][kleo_divider icon="0" text="FINANCIAL" style="font-size: 24pt;"][/vc_column][/vc_row][vc_row padding_top="10" padding_bottom="10"][vc_column width="1/2"][vc_column_text letter_spacing=""]
 <h3>Cost Information</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><strong>In-State Tuition</strong>
-
-&nbsp;
-
-$6,407
-
-&nbsp;
-
-<strong>Out-Of-State Tuition</strong>
-
-&nbsp;
-
-$22,504
-
-&nbsp;
-
-<strong>Room &amp; Board</strong>
-
-&nbsp;
-
-$9,764
-
-&nbsp;
-
-<strong><a href="http://finaid.ucf.edu/scholarships/index.html" target="_blank">Financial Aid</a></strong>
-
-&nbsp;
-
-<strong>Athletic Scholarships?</strong>
-
-&nbsp;
-
-No
-
-&nbsp;
-<div class="wpb_column vc_column_container vc_col-sm-6">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="kleo_text_column wpb_content_element ">
-<div class="wpb_wrapper">
+<table style="width: 300px;">
+<tbody>
+<tr>
+<td><strong>In-State Tuition</strong></td>
+<td align="right">${{instate}}</td>
+</tr>
+<tr>
+<td><strong>Out-Of-State Tuition</strong></td>
+<td align="right">${{outofstate}}</td>
+</tr>
+<tr>
+<td><strong>Room &amp; Board</strong></td>
+<td align="right">${{roomboard}}</td>
+</tr>
+<tr>
+<td colspan="2"><strong><a href="{{financialaid}}" target="_blank">Financial Aid</a></strong></td>
+</tr>
+<tr>
+<td><strong>Athletic Scholarships?</strong></td>
+<td align="right">{{athscholar}}</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_column_text letter_spacing=""]
 <h3>Other Financial Information</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-<strong>Meal Plan Options</strong>
-
-&nbsp;
-
-From $162.50 to $750.00
-
-&nbsp;
-
-<strong>Live on Campus?</strong>
-
-&nbsp;
-
-Up to Sophomore Year
-
-&nbsp;
-
-<strong>Cars Allowed on Campus?</strong>
-
-&nbsp;
-
-Yes
-
-&nbsp;
-
-<strong>Parking Cost</strong>
-
-&nbsp;
-
-No Information
-
-&nbsp;
-
-<!-- end section -->
-
-<section class="container-wrap main-color " style="padding-top: 40px; padding-bottom: 40px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-12">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="hr-title hr-full hr-center" style="font-size: 24pt;"><abbr><i class=""></i> ACADEMICS</abbr></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><!-- end section -->
-
-<section class="container-wrap main-color " style="padding-top: 10px; padding-bottom: 10px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-6">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="kleo_text_column wpb_content_element ">
-<div class="wpb_wrapper">
+<table style="width: 300px;">
+<tbody>
+<tr>
+<td><strong>Meal Plan Options</strong></td>
+<td align="right">{{mealplanoptions}}</td>
+</tr>
+<tr>
+<td><strong>Live on Campus?</strong></td>
+<td align="right">{{liveoncampus}}</td>
+</tr>
+<tr>
+<td><strong>Cars Allowed on Campus?</strong></td>
+<td align="right">{{carsallowed}}</td>
+</tr>
+<tr>
+<td><strong>Parking Cost</strong></td>
+<td align="right">${{parkingcost}}</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][kleo_divider icon="0" text="ACADEMICS" style="font-size: 24pt;"][/vc_column][/vc_row][vc_row padding_top="10" padding_bottom="10"][vc_column width="1/2"][vc_column_text letter_spacing=""]
 <h3>Academics</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><strong>Required GPA</strong>
-
-&nbsp;
-
-3.7
-
-&nbsp;
-
-<strong>Required ACT</strong>
-
-&nbsp;
-
-25
-
-&nbsp;
-
-<strong>Required SAT</strong>
-
-&nbsp;
-
-1190 (reading &amp; math) or 1760 (composite)
-
-&nbsp;
-
-<strong><a href="http://www.ucf.edu/degree-search/" target="_blank">Fields of Study</a></strong>
-
-&nbsp;
-<div class="wpb_column vc_column_container vc_col-sm-6">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="kleo_text_column wpb_content_element ">
-<div class="wpb_wrapper">
+<table style="width: 300px;">
+<tbody>
+<tr>
+<td><strong>Required GPA</strong></td>
+<td align="right">{{reqgpa}}</td>
+</tr>
+<tr>
+<td><strong>Required ACT</strong></td>
+<td align="right">{{reqact}}</td>
+</tr>
+<tr>
+<td><strong>Required SAT</strong></td>
+<td align="right">{{reqsat}}</td>
+</tr>
+<tr>
+<td colspan="2"><strong><a href="{{fieldsofstudy}}" target="_blank">Fields of Study</a></strong></td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_column_text letter_spacing=""]
 <h3>Academics (cont.)</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-<strong>Graduation Rate</strong>
-
-&nbsp;
-
-$6,407
-
-&nbsp;
-
-<strong>Class Size Ratio</strong>
-
-&nbsp;
-
-$22,504
-
-&nbsp;
-
-<strong>Center for Disabilities</strong>
-
-&nbsp;
-
-<a href="http://sas.sdes.ucf.edu/" target="_blank">More Information</a>
-
-&nbsp;
-
-<strong>Tutoring Services</strong>
-
-&nbsp;
-
-<a href="http://sarc.sdes.ucf.edu/tutoring" target="_blank">More Information</a>
-
-&nbsp;
-
-<!-- end section -->
-
-<section class="container-wrap main-color " style="padding-top: 40px; padding-bottom: 40px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-12">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="hr-title hr-full hr-center" style="font-size: 24pt;"><abbr><i class=""></i> ATHLETICS</abbr></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><!-- end section -->
-
-<section class="container-wrap main-color " style="padding-top: 10px; padding-bottom: 10px;">
-<div class="section-container container">
-<div class="vc_row vc_row-fluid row">
-<div class="wpb_column vc_column_container vc_col-sm-6">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="kleo_text_column wpb_content_element ">
-<div class="wpb_wrapper">
+<table style="width: 300px;">
+<tbody>
+<tr>
+<td><strong>Graduation Rate</strong></td>
+<td align="right">{{graduationrate}}</td>
+</tr>
+<tr>
+<td><strong>Class Size Ratio</strong></td>
+<td align="right">{{classsizeratio}}</td>
+</tr>
+<tr>
+<td><strong>Center for Disabilities</strong></td>
+<td align="right"><a href="{{disabilities}}" target="_blank">More Information</a></td>
+</tr>
+<tr>
+<td><strong>Tutoring Services</strong></td>
+<td align="right"><a href="{{tutoring}}" target="_blank">More Information</a></td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][kleo_divider icon="0" text="ATHLETICS" style="font-size: 24pt;"][/vc_column][/vc_row][vc_row padding_top="10" padding_bottom="10"][vc_column width="1/2"][vc_column_text letter_spacing=""]
 <h3>Bowling Team</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><strong>Offered Programs</strong>
-
-&nbsp;
-
-Men's Program (club)
-
-&nbsp;
-
-<strong><a href="https://ucf.collegiatelink.net/organization/bowlingclub" target="_blank">Team Website</a></strong>
-
-&nbsp;
-
-<strong>Head Coach</strong>
-
-&nbsp;
-
-Unknown
-
-&nbsp;
-
-<strong>Assistant Coach</strong>
-
-&nbsp;
-
-Unknown
-
-&nbsp;
-<div class="wpb_column vc_column_container vc_col-sm-6">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="kleo_text_column wpb_content_element ">
-<div class="wpb_wrapper">
+<table style="width: 300px;">
+<tbody>
+<tr>
+<td><strong>Offered Programs</strong></td>
+<td align="right">{{menprogncaa}}{{menprognaia}}{{menprogclub}}{{menprognjcaa}}
+{{womenprogncaa}}{{womenprognaia}}{{womenprogclub}}{{womenprognjcaa}}
+{{bothprogncaa}}{{bothprognaia}}{{bothprogclub}}{{bothprognjcaa}}</td>
+</tr>
+<tr>
+<td colspan="2"><strong><a href="{{teamwebsite}}" target="_blank">Team Website</a></strong></td>
+</tr>
+<tr>
+<td><strong>Head Coach</strong></td>
+<td align="right">{{coach}}</td>
+</tr>
+<tr>
+<td><strong>Assistant Coach</strong></td>
+<td align="right">{{asstcoach}}</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_column_text letter_spacing=""]
 <h3>Other Athletic Info</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-<strong>Gym Facilities</strong>
-
-&nbsp;
-
-Yes
-
-&nbsp;
-
-<strong>Gym Facility Cost</strong>
-
-&nbsp;
-
-Free
-
-&nbsp;
-
-<!-- end section -->
-
-
-            </xmp></pre>
+<table style="width: 300px;">
+<tbody>
+<tr>
+<td><strong>Gym Facilities</strong></td>
+<td align="right">{{gym}}</td>
+</tr>
+<tr>
+<td><strong>Gym Facility Cost</strong></td>
+<td align="right">{{gymcost}}</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]</xmp></pre>
         </div>
     </div>
 </div>
